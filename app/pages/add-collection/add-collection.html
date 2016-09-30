@@ -1,0 +1,49 @@
+<ion-header>
+ <ion-toolbar primary>
+  <ion-title>Add Collection</ion-title>
+  <ion-buttons end>
+    <button (click)="close()"><ion-icon name="close"></ion-icon></button>
+  </ion-buttons>
+ </ion-toolbar>
+</ion-header>
+ 
+<ion-content class="add-sale">
+ 
+    <ion-list>
+        <ion-item>
+            <ion-label floating primary>Name</ion-label>
+            <ion-input [(ngModel)]="name" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating primary>Image Name</ion-label>
+            <ion-input [(ngModel)]="shortname" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating primary>Title</ion-label>
+            <ion-input [(ngModel)]="title" type="text"></ion-input>
+        </ion-item>
+ 
+        <ion-item>
+            <ion-label floating primary>Description</ion-label>
+            <ion-textarea [(ngModel)]="description"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating primary>Start Date</ion-label>
+            <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="startdate"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating primary>End Date</ion-label>
+            <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="enddate"></ion-datetime>
+        </ion-item>
+        <ion-row responsive-sm>
+            <ion-col>
+                <button primary block (click)="save()">Save</button>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+ 
+</ion-content>

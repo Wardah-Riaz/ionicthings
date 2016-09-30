@@ -1,0 +1,75 @@
+$categories: (
+ ionic: color($colors, primary),
+ angular: #AC282B,
+ communication: #8E8D93,
+ tooling: #FE4C52,
+ services: #FD8B2D,
+ design: #FED035,
+ workshop: #69BB7B,
+ food: #3BC7C4,
+ documentation: #B16BE3,
+ navigation: #6600CC,
+);
+
+@function auxiliary-categories() {
+  @return map-remove($categories);
+}
+
+.item h3 {
+  font-weight: bold;
+  color: #417D9A;
+}
+// ::-webkit-scrollbar,
+// *::-webkit-scrollbar {
+//   display: none;
+// }
+.item h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c52d2f;
+}
+
+.home {
+
+  @each $track, $value in auxiliary-categories() {
+   ion-item-sliding[track=#{$track}] ion-label {
+     border-left: 2px solid $value;
+     padding-left: 10px;
+     
+   }
+  }
+}
+
+
+ion-scroll {
+  white-space: nowrap;
+  height: 100vh;
+}
+
+.wrapper {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  background-color: #EEE8D6;
+  white-space: nowrap;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card1 {
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+
+.internal {
+  display: inline-block;
+  width: 290px;
+  padding-right: 0px;
+  line-height: 20px;
+  vertical-align: top !important;
+  position: relative;
+
+  
+  /*background-color:silver;*/
+}

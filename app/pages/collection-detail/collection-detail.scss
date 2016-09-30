@@ -1,0 +1,43 @@
+$categories: (
+ ionic: color($colors, primary),
+ angular: #AC282B,
+ communication: #8E8D93,
+ tooling: #FE4C52,
+ services: #FD8B2D,
+ design: #FED035,
+ workshop: #69BB7B,
+ food: #3BC7C4,
+ documentation: #B16BE3,
+ navigation: #6600CC,
+);
+
+@function auxiliary-categories() {
+  @return map-remove($categories);
+}
+
+.item h3 {
+  font-weight: bold;
+  color: #417D9A;
+}
+
+.item h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c52d2f;
+}
+
+.button-asss {
+  font-size:1.2rem !important;
+  background: #fff;
+  border-bottom: 5px solid #969696;
+  border: 1px solid #b3b3b3;
+  color: #c52d2f;
+  background-color: #EEE8D6;
+  text-align: center;
+}
+
+.card1 {
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+

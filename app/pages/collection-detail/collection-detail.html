@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Collection</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color: #EEE8D6;
+">
+      <ion-card class="card1">
+        
+        <ion-item style="background-color: #b5d3e3" text-wrap>
+          <ion-avatar item-left>
+            <img src="img/{{collection.shortname}}.jpg">
+          </ion-avatar>
+          <h3>{{collection.name}}</h3>
+          <h4>{{collection.title}}</h4>
+          <h5 *ngIf="!collection.enddate">
+            starts {{collection.startdate|date:'EEEE' }}, {{ collection.startdate|date:'MMM dd' }}
+          </h5>
+          <h5 *ngIf="collection.enddate">
+            {{ collection.startdate|date:'MMM dd' }}
+              to {{ collection.enddate|date:'MMM dd' }}
+          </h5>
+          <button item-right class="button button-asss">Day {{collection.daynum}}</button>
+        </ion-item>
+
+        <img style="height:150px" src="img/{{collection.shortname}}_card.jpg">
+
+        <ion-card-content style="white-space: normal">
+          <p>
+            {{collection.description}}
+          </p>
+          </ion-card-content>
+        
+      </ion-card>
+</ion-content>
